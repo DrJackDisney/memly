@@ -31,12 +31,29 @@
 	background-color: #DC9FB4;
 }
 
+.bk-nadeshiko-theme2{
+	background-color: #FFFBD2;
+}
+
+.bk-nadeshiko-theme3{
+	background-color: #DC9FB4;
+}
+
+.bk-nadeshiko-theme4{
+	background-color: #7FBCCC;
+}
+
+.bk-nadeshiko-theme5{
+	background-color: #78A7B2;
+}
+
 
 
 /* body */
 body{
 	margin: 0;
 	font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
+	color: #1C1C1C;
 }
 
 
@@ -49,6 +66,10 @@ body{
 	margin-top: 50px;
 }
 
+/* content */
+.left-content{
+
+}
 
 
 /** override bootstrap **/

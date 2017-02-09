@@ -33,7 +33,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-3 left-content">.col-sm-3
+			<div class="col-sm-3 left-content bk-nadeshiko-theme4">.col-sm-3
 
 			</div>
 			<div class="col-sm-6 center-content">
@@ -42,7 +42,7 @@
 				echo "<h1>$message</h1>";
 				?>
 			</div>
-			<div class="col-sm-3 right-content">.col-sm-3
+			<div class="col-sm-3 right-content bk-nadeshiko-theme5">.col-sm-3
 			</div>
 		</div>
 
