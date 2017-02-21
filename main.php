@@ -23,7 +23,14 @@
         			<img class="img-logo" alt="Memly" src="img/logo.png">
         		</a>
         	</div>
-        	<!-- ログインユーザーの顔写真 -->
+
+        	<div class="nav navbar-nav navbar-right header-right">
+        		<!-- ログインユーザーの顔写真 -->
+        		<div class="navbar-avatar avatar-box">
+					<img class="navbar-avatar avatar-box-img" src="img/sample/sample-avatar.jpg">
+				</div>
+        	</div>
+
         	<!-- <div class="collapse navbar-collapse" id="navbar-collapse1">
       			ここにボディパーツを入れる
     		</div> -->
@@ -33,14 +40,25 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-3 left-content bk-nadeshiko-theme4">.col-sm-3
+			<div class="col-sm-3 left-content bk-nadeshiko-theme2">.col-sm-3
 
 			</div>
 			<div class="col-sm-6 center-content">
 				<div class="post-box panel">
-					<textarea id="post-box-textarea" class="post-box-textarea" name="post-box-textarea" rows="5" cols="50" title="思い出をシェアしましょう" placeholder="思い出をシェアしましょう" ng-model="postedMessage">
-					</textarea>
-					<button class="post-box-button" ng-click="showNewMessage()">投稿する</button>
+					<div class="post-box-edit">
+						<div class="post-box-edit-left">
+							<!-- アバターアイコン -->
+							<div class="post-box-edit-left-avatar avatar-box">
+								<img class="post-box-edit-left-avatar-img avatar-box-img" src="img/sample/sample-avatar.jpg">
+							</div>
+						</div>
+						<div class="post-box-edit-right">
+							<textarea id="post-box-edit-right-textarea" class="post-box-edit-right-textarea" name="post-box-edit-right-textarea" rows="5" cols="50" title="思い出をシェアしましょう" placeholder="思い出をシェアしましょう" ng-model="postedMessage"></textarea>
+						</div>
+					</div>
+					<div class="post-box-operation">
+						<button class="post-box-operation-button" ng-click="showNewMessage()">投稿する</button>
+					</div>
 				</div>
 				<h1>{{newMessage}}</h1>
 
@@ -50,7 +68,7 @@
 				?>-->
 
 			</div>
-			<div class="col-sm-3 right-content bk-nadeshiko-theme5">.col-sm-3
+			<div class="col-sm-3 right-content bk-nadeshiko-theme2">.col-sm-3
 			</div>
 		</div>
 
