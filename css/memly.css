@@ -47,13 +47,37 @@
 	background-color: #78A7B2;
 }
 
+/** text-colors **/
+.text-normal{
+	color: #333333;
+	color: #C1C1C1;
+}
 
+.text-strong{
+	color: #000000;
+}
+
+.text-light{
+	color: #7F7F7F;
+}
+
+.text-lightest{
+	color: #BDBDBD;
+}
+
+.text-hint{
+	color: #AAAAAA;
+}
+
+.text-disabled{
+	color: #D0D0D0;
+}
 
 /* body */
 body{
 	margin: 0;
 	font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
-	color: #1C1C1C;
+
 }
 
 
@@ -77,7 +101,7 @@ body{
 
 .post-box{
 	background-color: #FEDFE1;
-	padding: 8px;
+	padding: 8px 12px;
 }
 
 .post-box-edit{
@@ -85,7 +109,7 @@ body{
 }
 
 .post-box-edit-left{
-	margin: 0 8px 0 0;
+	margin: 0 12px 0 0;
 }
 
 .post-box-edit-left-avatar-img{
@@ -118,12 +142,106 @@ body{
 	border-radius: 8px;
 }
 
+.avatar-box-img-xs{
+	width: 20px;
+	height: 20px;
+	border-radius: 2px;
+}
+
+
+/** timeline box **/
+.timeline-box{
+	margin-bottom: 200px;
+}
+
+
+/** feed **/
+.feed{
+	border: 1px solid #dddddd;
+	padding: 8px 12px;
+}
+
+.feed-header{
+	display: flex;
+	margin-bottom: 12px;
+}
+
+.feed-header-info{
+	display: flex;
+	width: 100%;
+}
+
+.feed-header-info-avatar{
+	margin: 0 8px 0 0;
+}
+
+.feed-body-object{
+	margin-bottom: 8px;
+}
+
+.feed-body-comment{
+	margin-bottom: 8px;
+}
+
+.feed-body-object-image{
+	width:100%;
+}
+
+.feed-reaction{
+	margin-bottom: 8px;
+}
+
+.feed-reaction-act{
+	display: flex;
+}
+
+.feed-reaction-act-icon{
+    margin-right: 4px;
+    line-height: 20px;
+}
+
+.feed-reaction-act-icon-heart{
+	color: #CB1B45;
+}
+
+.feed-operation{
+	display: flex;
+    border-top: 1px solid #dddddd;
+    padding-top: 8px;
+}
+
+.feed-operation-button {
+    padding: 0px 8px;
+    font-size: 12px;
+}
+
+.feed-operation-button:first-child {
+    padding-left: 0;
+}
+
+.feed-operation-button:hover {
+	color: #7F7F7F;
+}
+
+
+.feed-operation-button:hover .feed-operation-button-text {
+	text-decoration: underline;
+}
+
 /** override bootstrap **/
 @media (min-width: 1200px){
-	.container {
-	    width: 1190px;
+
+	.container-fluid {
+	    width: 1170px;
 	    padding-right: 0;
 	    padding-left: 0;
+	    margin-right: auto;
+	    margin-left: auto;
+	}
+
+
+	.container {
+	    //width: 1190px;
 	}
 }
 

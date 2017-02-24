@@ -13,7 +13,7 @@
 		<link href="css/memly.css" rel="stylesheet" type="text/css" >
 
 	</head>
-	<body class="bk-shironeri" ng-controller="MainAppController">
+	<body class="bk-shironer text-normali" ng-controller="MainAppController">
 
 	<!-- navbar -->
 	<nav class="navbar navbar-default navbar-fixed-top bk-nadeshiko" >
@@ -60,7 +60,74 @@
 						<button class="post-box-operation-button" ng-click="showNewMessage()">投稿する</button>
 					</div>
 				</div>
-				<h1>{{newMessage}}</h1>
+				<div class="timeline-box panel">
+					<h1>{{newMessage}}</h1>
+
+					<div class="feed">
+
+						<div class="feed-header">
+							<div class="feed-header-info">
+								<div class="feed-header-info-avatar avatar-box">
+									<img class="feed-header-info-avatar-img avatar-box-img" src="img/sample/sample-avatar.jpg">
+								</div>
+								<div class="feed-header-info-main">
+									<div class="feed-header-info-main-name">
+										<a href="#" class="link">稲葉 良子</a>
+									</div>
+									<div class="feed-header-info-main-time">
+										<span class="text-hint">34秒前</span>
+									</div>
+								</div>
+							</div>
+							<div class="feed-header-option">
+								<span class="glyphicon glyphicon-menu-down text-hint" aria-hidden="true"></span>
+							</div>
+						</div>
+
+						<div class="feed-body">
+							<div class="feed-body-comment">
+								<span class="feed-body-comment">
+									今日は大宮にあるたまひよ写真館に行ってきました。子供たちもお姉さん達の盛り上げに誘われて、終始楽しく撮影できました。
+									綺麗な写真いっぱい取ってもらえました。
+								</span>
+							</div>
+							<div class="feed-body-object">
+								<img class="feed-body-object-image" src="img/sample/sample_photo.jpg">
+							</div>
+
+						</div>
+
+						<div class="feed-reaction">
+							<div class="feed-reaction-act">
+								<div class="feed-reaction-act-icon">
+									<span class="feed-reaction-act-icon-heart glyphicon glyphicon-heart"></span>
+								</div>
+								<div class="feed-reaction-act-users">
+									<img class="feed-reaction-act-users avatar-box-img-xs" src="img/sample/sample-avatar.jpg">
+								</div>
+							</div>
+						</div>
+
+						<div class="feed-operation">
+							<div class="feed-operation-button text-hint">
+								<span class="feed-operation-button-icon glyphicon glyphicon-comment"></span>
+								<span class="feed-operation-button-text">コメントする</span>
+
+							</div>
+							<div class="feed-operation-button text-hint">
+								<span class="feed-operation-button-icon glyphicon glyphicon-heart"></span>
+								<span class="feed-operation-button-text">かわいい！</span>
+
+							</div>
+							<!--
+							<div class="feed-operation-button text-hint">
+								<span class="feed-operation-button-icon"></span>
+								<span class="feed-operation-button-text">シェアする</span>
+							</div>
+							 -->
+						</div>
+					</div>
+				</div>
 
 				<!--<?php
 				$message = "Hello Memly";
