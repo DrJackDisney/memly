@@ -57,53 +57,66 @@
 						</div>
 					</div>
 					<div class="post-box-operation">
-						<button class="post-box-operation-button" ng-click="showNewMessage()">投稿する</button>
+						<button class="btn post-box-operation-button" ng-click="addFeed()">投稿する</button>
 					</div>
 				</div>
+
+
+				<!-- Timeline Box -->
 				<div class="timeline-box panel">
 					<h1>{{newMessage}}</h1>
 
-					<div class="feed">
+					<div ng-repeat="feed in feeds" class="feed">
 
 						<div class="feed-header">
 							<div class="feed-header-info">
 								<div class="feed-header-info-avatar avatar-box">
-									<img class="feed-header-info-avatar-img avatar-box-img" src="img/sample/sample-avatar.jpg">
+									<img class="feed-header-info-avatar-img avatar-box-img" ng-src="{{feed.avatarImg}}">
 								</div>
 								<div class="feed-header-info-main">
 									<div class="feed-header-info-main-name">
-										<a href="#" class="link">稲葉 良子</a>
+										<a href="#" class="link">{{feed.posterName}}</a>
 									</div>
 									<div class="feed-header-info-main-time">
-										<span class="text-hint">34秒前</span>
+										<span class="text-hint">{{feed.posterTime}}</span>
 									</div>
 								</div>
 							</div>
 							<div class="feed-header-option">
-								<span class="glyphicon glyphicon-menu-down text-hint" aria-hidden="true"></span>
+								<div class="dropdown feed-header-option-dropdown">
+									<button class="btn feed-header-option-dropdown-btn" type="button" id="feedMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+										<span class="feed-header-option-dropdown-btn-icon glyphicon glyphicon-menu-down text-hint" aria-hidden="true"></span>
+									</button>
+									<ul class="dropdown-menu feed-header-option-dropdown-menu" aria-labelledby="feedMenu">
+										<li><a href="#">画像を保存</a></li>
+										<li role="separator" class="divider"></li>
+										<li><a href="#">投稿を編集</a></li>
+										<li><a href="#">日付を変更</a></li>
+									    <li role="separator" class="divider"></li>
+									    <li><a href="#">投稿を削除</a></li>
+									</ul>
+								</div>
+
 							</div>
 						</div>
 
 						<div class="feed-body">
 							<div class="feed-body-comment">
-								<span class="feed-body-comment">
-									今日は大宮にあるたまひよ写真館に行ってきました。子供たちもお姉さん達の盛り上げに誘われて、終始楽しく撮影できました。
-									綺麗な写真いっぱい取ってもらえました。
-								</span>
+								<span class="feed-body-comment">{{feed.feedComment}}</span>
 							</div>
-							<div class="feed-body-object">
-								<img class="feed-body-object-image" src="img/sample/sample_photo.jpg">
+							<div class="feed-body-object" ng-if="feed.feedObjImg != ''">
+								<img class="feed-body-object-image" ng-src="{{feed.feedObjImg}}">
 							</div>
 
 						</div>
 
 						<div class="feed-reaction">
 							<div class="feed-reaction-act">
-								<div class="feed-reaction-act-icon">
-									<span class="feed-reaction-act-icon-heart glyphicon glyphicon-heart"></span>
+								<div class="feed-reaction-act-icon" ng-if="feed.reactIcon != ''">
+									<span class="feed-reaction-act-icon-heart glyphicon {{feed.reactIcon}}"></span>
 								</div>
-								<div class="feed-reaction-act-users">
-									<img class="feed-reaction-act-users avatar-box-img-xs" src="img/sample/sample-avatar.jpg">
+								<div class="feed-reaction-act-users" ng-if="feed.reactAvatar != ''">
+									<img class="feed-reaction-act-users avatar-box-img-xs" ng-src="{{feed.reactAvatar}}">
 								</div>
 							</div>
 						</div>
@@ -128,11 +141,6 @@
 						</div>
 					</div>
 				</div>
-
-				<!--<?php
-				$message = "Hello Memly";
-				echo "<h1>$message</h1>";
-				?>-->
 
 			</div>
 			<div class="col-sm-3 right-content bk-nadeshiko-theme2">.col-sm-3

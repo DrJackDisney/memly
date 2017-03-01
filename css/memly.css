@@ -158,7 +158,9 @@ body{
 /** feed **/
 .feed{
 	border: 1px solid #dddddd;
-	padding: 8px 12px;
+    padding: 8px 12px;
+    margin-bottom: 16px;
+    // box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.15), 0 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 .feed-header{
@@ -169,6 +171,22 @@ body{
 .feed-header-info{
 	display: flex;
 	width: 100%;
+}
+
+.feed-header-option-dropdown-btn{
+	padding: 0 6px 0 6px;
+    border: none;
+    background-color: transparent;
+    color: #AAAAAA;
+}
+
+.btn.feed-header-option-dropdown-btn:active,.btn.feed-header-option-dropdown-btn:focus,.btn.feed-header-option-dropdown-btn:active:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.feed-header-option-dropdown-btn:hover span{
+	color: #7F7F7F;
 }
 
 .feed-header-info-avatar{
@@ -198,6 +216,7 @@ body{
 .feed-reaction-act-icon{
     margin-right: 4px;
     line-height: 20px;
+    font-size: 20px;
 }
 
 .feed-reaction-act-icon-heart{
