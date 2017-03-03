@@ -57,7 +57,7 @@
 						</div>
 					</div>
 					<div class="post-box-operation">
-						<button class="btn post-box-operation-button" ng-click="addFeed()">投稿する</button>
+						<button class="btn btn-post-box-operation-button" ng-click="addFeed()">投稿する</button>
 					</div>
 				</div>
 
